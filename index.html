@@ -28,12 +28,24 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="vendors/css/material-alfa.css" />
     <link rel="stylesheet" href="vendors/css/prism.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="vendors/js/prism.js"></script>
 </head>
 
 <body ng-controller="mainCtrl">
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-99569370-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
             <div class="mdl-layout--large-screen-only">
@@ -48,7 +60,7 @@
 
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a ng-class="menuClass('blogs')" class="mdl-navigation__link " href="#/blogs">Blogs</a>
+                    <a ng-class="menuClass('blogs')" class="mdl-navigation__link is-active" href="#/blogs">Blogs</a>
                     <a ng-class="menuClass('portfolios')" class="mdl-navigation__link" href="#/portfolios">Portfolio</a>
                     <a ng-class="menuClass('about')" class="mdl-navigation__link" href="#/about">About</a>
                     <a ng-class="menuClass('contact')" class="mdl-navigation__link" href="#/contact">Contact</a>
