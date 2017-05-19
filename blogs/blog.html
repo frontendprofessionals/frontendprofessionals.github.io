@@ -1,0 +1,97 @@
+<div class="mdl-grid portfolio-max-width">
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+        <div class="mdl-card__title">
+            <h2 style="color: rgb(255,64,129); font-weight: 300;" class="mdl-card__title-text">{{ blog.title }}</h2>
+        </div>
+        <div class="mdl-card__media">
+            <img class="article-image" ng-src="{{ blog.image1 }}" border="0" alt="">
+        </div>
+        <div class="mdl-card__supporting-text">
+            <strong>Tags</strong>
+            <span><strong>CSS</strong>, <strong>SASS</strong>, Design, UI/UX and <strong>Frontend Development</strong></span>
+        </div>
+        <div class="mdl-grid portfolio-copy">
+            <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introduction</h3>
+            <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding">
+                <p class="description">Professional developers have switch today to using <strong>CSS-preprocessor stylesheets</strong>. But, this does not exclude the facts that, many other developers are still wondering if they should make the switch over to using a <strong>CSS-preprocessor</strong> like <strong>SASS , LESS and Stylus</strong> instead of just <strong>plain CSS</strong>. Over these three most popular CSS-Preprocessor, We will focus more on SASS to illustrate the advantage of <strong>CSS-Preprocessors</strong> over <strong>Traditional CSS</strong>. In this article I will start with by answering; What is css-preprocessor ? And then followed by sharing with you a few reasons that convinced me to make the switch over to using SASS for all my projects.</p>
+            </div>
+            <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">{{ blog.question1 }}</h3>
+            <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                <p class="description">{{ blog.answer1 }}</p>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <img class="article-image" ng-src="{{ blog.image2 }}" border="0" alt="">
+                <small>Source: <a href="https://ashleynolan.co.uk/blog/frontend-tooling-survey-2015-results">ashleynolan.co.uk</a> Disclaimer: these are just responses from a small portion of developers.</small>
+            </div>
+            <h2 class="mdl-cell mdl-cell--12-col mdl-typography--headline">5 vantages of Using SaSS over CSS </h2>
+            <div class="mdl-cell mdl-cell--12-col">
+                <h4 class="mdl-cell mdl-cell--12-col mdl-typography--headline">1- Technically there’s no learning curve at all</h4>
+                <p class="description">Valid css code are valide sass code. so, for exemple. All you do is introduce variables for your color palette into your code, you have already saved enough time in maintenance to justify the tiny learning curve</p>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <h4 class="mdl-cell mdl-cell--12-col mdl-typography--headline">2- Reusable Color Scheming</h4>
+                <p class="description">Another <strong>benefit of SASS</strong> is that it allows us to define variables that are reusable throughout our entire project. This provides a huge benefit when working with things like colors and fixed width sizes. Let’s take the example of color scheming for a minute and look at the traditional CSS vs. the new and improved SASS workflow. In plain CSS you may declare your body to have a background of <span class="code">#CCC</span>. Of course your footer text color may be <span class="code">#CCC</span>, along with your border around images, as well as the highlight background of any links that are clicked. So in your CSS stylesheet you may declare <span class="code">background: #CCC;</span> and <span class="code">color: #CCC</span> twenty or thirty times throughout your project. What happens if your client comes back and would like the color changed to something a little lighter like <span class="code">#ededed</span>? You would have to locate all the references to <span class="code">#CCC</span> and change them to <span class="code">#ededed</span>. What a hassle! Enter a new and improved workflow with SASS. In SASS syntax you would simply declare a variable named <span class="code">$light-gray;</span> Any time you needed to use the color <span class="code">#CCC</span>, you would simply declare background: <span class="code">$light-gray</span>. Very simple. In the future when you need to change the color to <span class="code">#ededed</span> you simply go to that variable reference and change $light-gray to <span class="code">#ededed</span> – one time instead of thirty times; what a time-saver!</p>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <h4 class="mdl-cell mdl-cell--12-col mdl-typography--headline">3- Reducing the HTTP Requests and improve code quality by using the @import Attribute</h4>
+                <p class="description">A few years back web experts were recommending that you separate your css files into separate files based on the content i.e. fonts, colors, inputs, buttons etc. One of the drowback with this approach is that you will have a huge number of HTTP requests on your website, which will slow down the load time of your website. However, because SASS uses a Ruby complier we are able to break up our stylesheets into multiple files and then have one “style.scss” that “@import”s all the various other stylesheets when it is compled and this can be later minified on compilation.</p>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <h4 class="mdl-cell mdl-cell--12-col mdl-typography--headline">4- Inheritance on similar CSS Statements using the attribut @extend</h4>
+                <p class="description">Another feature of SASS that begins to utilize some of its power is the @extend attribute. With @extend you can include styles into other classes that belong to a base class. Ok, let me explain with an example.</p>
+                <p class="description">Let’s say you are going to style 3 different images in the footer which will have most of the same styles with a slight modification. Well instead of writing <span class="code">.card1 { … styles } .card2 { …styles… } card3 { …styles… }</span> SASS has a better way. With SASS you simply write <span class="code">.card { …main styles… }</span> and then <span class="code">.card1 { @extend .card; specific styles … }, .card2 { @extend .card; specific styles … }</span> and so on. This can not only result in a huge time savings, but it keeps your code more organized as well.</p>
+                <p class="description">Now, you can do something similar to this in CSS by listing the classes like .image1, .image2, .image3 but this way is sometimes so cumbersome I find that a lot of designers will simply type out the code again forgetting to use that technique. The SASS way is much easier and more update friendly.</p>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <h4 class="mdl-cell mdl-cell--12-col mdl-typography--headline">5- Sweetable for Responsive Design Project</h4>
+                <p class="description">A few years back web experts were recommending that you separate your css files into separate files based on the content i.e. fonts, colors, inputs, buttons etc. One of the drowback with this approach is that you will have a huge number of HTTP requests on your website, which will slow down the load time of your website. However, because SASS uses a Ruby complier we are able to break up our stylesheets into multiple files and then have one “style.scss” that “@import”s all the various other stylesheets when it is compled and this can be later minified on compilation.</p>
+                <small>bellow is a sniped of what my a sass(.scss) file looks like:</small>
+                <pre>
+                    <code class="code">
+/******************************************************************
+MOBILE VIEW SIZE
+This is viewing on a mobile device. Here’s where
+you can add resource styling the mobile styles.
+******************************************************************/
+@media only screen and (min-width: 481px) {
+/* styles in 481up.scss */
+@import “481up”;
+} /* end of media query */
+/******************************************************************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here’s where
+you can add resource intensive styles.
+******************************************************************/
+@media only screen and (min-width: 768px) {
+/* styles in 768up.scss */
+@import “768up”;
+} /* end of media query */
+/******************************************************************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here’s where
+you can add resource intensive styles.
+******************************************************************/
+@media only screen and (min-width: 900px) {
+/* styles in 1030up.scss */
+@import “900up”;
+} /* end of media query */
+@media only screen and (min-width: 1030px) {
+/* styles in 1030up.scss */
+@import “1030up”;
+} /* end of media query */
+/******************************************************************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+******************************************************************/
+@media only screen and (min-width: 1240px) {
+/* styles in 1240up.scss */
+@import “1240up”;
+} /* end of media query */
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
