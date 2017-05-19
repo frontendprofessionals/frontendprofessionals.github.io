@@ -69,10 +69,10 @@
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a class="mdl-navigation__link is-active" href="#/blogsl">Blog</a>
-                <a class="mdl-navigation__link" href="#/portfolios">Portfolio</a>
-                <a class="mdl-navigation__link" href="me/about.html">About</a>
-                <a class="mdl-navigation__link" href="me/contact.html">Contact</a>
+                <a ng-class="menuClass('blogs')" class="mdl-navigation__link is-active" href="#/blogs">Blogs</a>
+                <a ng-class="menuClass('portfolios')" class="mdl-navigation__link" href="#/portfolios">Portfolio</a>
+                <a ng-class="menuClass('about')" class="mdl-navigation__link" href="#/about">About</a>
+                <a ng-class="menuClass('contact')" class="mdl-navigation__link" href="#/contact">Contact</a>
             </nav>
         </div>
         <main class="mdl-layout__content">

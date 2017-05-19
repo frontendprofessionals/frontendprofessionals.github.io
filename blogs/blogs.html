@@ -26,7 +26,7 @@
             <h2 class="mdl-card__title-text"><a href="#/blogs/{{ blog.id }}/{{ blog.url_title }}">{{ blog.title}}</a></h2>
         </div>
         <div class="mdl-card__media">
-            <a href="#"> <img class="article-image" ng-src="{{ blog.image1 }}" border="0" alt=""></a>
+            <a href="#/blogs/{{ blog.id }}/{{ blog.url_title }}"> <img class="article-image" ng-src="{{ blog.image1 }}" border="0" alt=""></a>
         </div>
         <div class="mdl-card__supporting-text no-bottom-padding">
             <span><b>Posted:</b> {{ blog.created_at }}</span>
@@ -39,7 +39,7 @@
             <p style="text-align: justify;">{{ blog.description | limitTo: 300 }}...</p>
         </div>
         <div class="mdl-card__actions mdl-card--border">
-            <a href="" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <a href="#/blogs/{{ blog.id }}/{{ blog.url_title }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Read more
             </a>
         </div>
