@@ -2,10 +2,9 @@
     <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
         <div class="mdl-card__title">
             <h2 style="color: rgb(255,64,129); font-weight: 300;" class="mdl-card__title-text">{{ blog.title }}</h2>
-            <div class="mdl-layout__header-row">
-                <b>Published on:</b><span>{{ blog.created_at }}</span>
-                <div>   <div class="g-commentcount" data-href="https://frontendprofessionals.github.io/#/blogs/201705191/Benefits_of_using_CSS-Preprocessors_over_Traditional_CSS"></div> <i class="material-icons">comment</i></div>
-            </div>
+        </div>
+        <div class="mdl-layout__header-row">
+            <strong>Published on:</strong><span>{{ blog.created_at }}</span>
         </div>
         <div class="mdl-card__media">
             <img class="article-image" ng-src="{{ blog.image1 }}" border="0" alt="">
@@ -103,6 +102,7 @@ This is for the larger monitors and possibly full screen viewers.
             </div>
         </div>
     </div>
+    <script src="https://apis.google.com/js/plusone.js"></script>
     <div class="g-comments"
          data-href = window.location
          data-width = "650"
