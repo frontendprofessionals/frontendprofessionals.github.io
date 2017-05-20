@@ -30,6 +30,13 @@
     <link rel="stylesheet" href="vendors/css/prism.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+    </style>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -105,7 +112,7 @@
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="vendors/js/prism.js" data-manual></script>
     <script async="true" src="https://static.optinchat.com/optinchat.js" id="oc_script" convid="TQsrBSgMNCTtnqkOC9rzWMquDbC2"></script>
-
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-591f912e0b0bd88f"></script>
 </body>
