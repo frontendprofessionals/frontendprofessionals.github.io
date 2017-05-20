@@ -70,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/blogs/blog.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="409">
-              <caret line="159" column="38" lean-forward="true" selection-start-line="159" selection-start-column="38" selection-end-line="159" selection-end-column="38" />
+              <caret line="159" column="14" lean-forward="true" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
@@ -379,12 +379,12 @@
       <workItem from="1495112893040" duration="6030000" />
       <workItem from="1495147790695" duration="12453000" />
       <workItem from="1495194106194" duration="13036000" />
-      <workItem from="1495236106490" duration="3852000" />
+      <workItem from="1495236106490" duration="4085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35371000" />
+    <option name="totallyTimeSpent" value="35604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="772" extended-state="0" />
@@ -637,7 +637,7 @@
     <entry file="file://$PROJECT_DIR$/blogs/blog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
-          <caret line="159" column="38" lean-forward="true" selection-start-line="159" selection-start-column="38" selection-end-line="159" selection-end-column="38" />
+          <caret line="159" column="14" lean-forward="true" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
