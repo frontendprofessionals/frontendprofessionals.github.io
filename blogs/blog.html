@@ -3,8 +3,10 @@
         <div class="mdl-card__title">
             <h2 style="color: rgb(255,64,129); font-weight: 300;" class="mdl-card__title-text">{{ blog.title }}</h2>
         </div>
-        <div class="mdl-layout__header-row">
+        <div class="mdl-cell mdl-cell--12-col">
             <strong>Published on:</strong><span>{{ blog.created_at }}</span>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox"></div>
         </div>
         <div class="mdl-card__media">
             <img class="article-image" ng-src="{{ blog.image1 }}" border="0" alt="">
@@ -155,6 +157,9 @@ This is for the larger monitors and possibly full screen viewers.
                 <p><a href="http://sass-lang.com/" target="_blank">official sasswebsite</a></p>
                 <p><a href="https://scotch.io/tutorials/getting-started-with-sass" target="_blank">Getting Started with SASS (with Interactive Examples)</a></p>
             </div>
+            <hr>
+            <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
+            <hr>
             <div class="mdl-cell mdl-cell--12-col">
                 <div class="fb-comments" data-href="https://frontendprofessionals.github.io/#/blogs/201705191/Benefits_of_using_CSS-Preprocessors_over_Traditional_CSS" data-width="500" data-numposts="6"></div>            </div>
         </div>
