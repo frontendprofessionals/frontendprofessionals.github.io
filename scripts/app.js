@@ -56,10 +56,8 @@ app.controller("BlogCtrl", ['$scope', '$routeParams', 'BlogsService', function (
 app.config(function($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl : "blogs/blogs.html"
-        })
-        .when("/blogs", {
-            templateUrl : "blogs/blogs.html"
+            templateUrl : "blogs/blogs.html",
+            controller  : "BlogsCtrl"
         })
         .when("/about", {
             templateUrl : "me/about.html"
