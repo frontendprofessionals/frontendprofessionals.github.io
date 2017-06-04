@@ -54,7 +54,8 @@ app.controller("BlogCtrl", ['$scope', '$routeParams', 'BlogsService', function (
 }]);
 
 //controller to handle the detail of the contact form
-app.controller('ContactCtrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+app.controller('ContactCtrl', ['$scope', '$http', '$timeout', '$route', function($scope, $http, $timeout, $route) {
+    $route.reload();
     $scope.success = false;
     $scope.error = false;
     $scope.sent = function(){
