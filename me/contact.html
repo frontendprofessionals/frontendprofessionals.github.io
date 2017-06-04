@@ -1,4 +1,5 @@
-
+<div ng-show="success" class="hider success-sent">Message envoyé !</div>
+<div ng-show="error" class="hider error-sent">Erreur d'envoi. reessayez</div>
 <div class="mdl-grid portfolio-max-width portfolio-contact">
     <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
         <div class="mdl-card__title">
@@ -15,18 +16,23 @@
                 Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod
                 labore sit amet.
             </p>-->
-            <form action="#" class="">
+            <form class="" ng-submit="sent()">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                    <input class="mdl-textfield__input" ng-model="form.name" pattern="[A-Z,a-z, ]*" type="text" id="Name">
                     <label class="mdl-textfield__label" for="Name">Name...</label>
                     <span class="mdl-textfield__error">Letters and spaces only</span>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="Email">
-                    <label class="mdl-textfield__label" for="Email">Email...</label>
+                    <input class="mdl-textfield__input" ng-model="form.email" type="email" id="Email" >
+                    <label class="mdl-textfield__label" for="Email">Email not valid</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+                    <input class="mdl-textfield__input" ng-model="form.subject" pattern=".{5,150}" type="text" id="Subject">
+                    <label class="mdl-textfield__label" for="Subject">Subject Title</label>
+                    <span class="mdl-textfield__error">Minimum is 5 max is 150 characters</span>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <textarea class="mdl-textfield__input" ng-model="form.message" type="text" rows="5" id="note"></textarea>
                     <label class="mdl-textfield__label" for="note">Enter note</label>
                 </div>
                 <p>

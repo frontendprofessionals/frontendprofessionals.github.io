@@ -53,6 +53,35 @@ app.controller("BlogCtrl", ['$scope', '$routeParams', 'BlogsService', function (
     $scope.blog = blog[0];
 }]);
 
+//controller to handle the detail of the contact form
+app.controller('ContactCtrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+    $scope.success = false;
+    $scope.error = false;
+    $scope.sent = function(){
+        $http({
+            method: "POST",
+            url: "envoi.php",
+            data: $.param($scope.form),  // pass in data as strings
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }).success(function(data) {
+            console.log(data);
+            if (!data.success) {
+                $scope.error = !data.success;
+                $timeout(function () { $scope.error = false; }, 4000);
+            }
+            else {
+                console.log(data);
+                $scope.success = data.success;
+                $timeout(function () { $scope.success = false; }, 4000);
+                $scope.form = {};
+            }
+        }).error(function(data) {
+            $scope.error = !data.success;
+            $timeout(function () { $scope.error = false; }, 4000);
+        });
+    }
+}]);
+
 app.config(function($routeProvider) {
     $routeProvider
         .when("/", {
@@ -77,6 +106,7 @@ app.config(function($routeProvider) {
             controller  : "BlogCtrl"
         })
         .when("/contact", {
-            templateUrl : "me/contact.html"
+            templateUrl : "me/contact.html",
+            controller  : "ContactCtrl"
         });
 });
